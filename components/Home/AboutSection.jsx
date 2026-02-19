@@ -32,7 +32,7 @@ export default function AboutSection() {
         {/* Right Image */}
         <div className="flex justify-center order-1 md:order-2">
           <img
-            src="/about.jpg"
+            src="/story/story1.jpg"
             alt="Wellness Image"
             className="rounded-xl shadow-lg w-full max-w-lg object-cover"
           />
