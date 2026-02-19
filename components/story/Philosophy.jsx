@@ -59,10 +59,10 @@ export default function Philosophy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="absolute -bottom-16 md:-bottom-20 -right-3 md:-right-6 w-40 h-36 md:w-56 md:h-44 rounded-2xl overflow-hidden shadow-xl border-[6px] border-white bg-white "
+              className="absolute -bottom-16 md:-bottom-20 -right-3 md:-right-6 w-40 h-36 md:w-56 md:h-72 rounded-2xl overflow-hidden shadow-xl border-[6px] border-white bg-white "
             >
               <Image
-                src="/story/philosopy1.jpg"
+                src="/story/philosopy2.jpg"
                 alt="Additional wellness visual"
                 fill
                 className="object-cover"

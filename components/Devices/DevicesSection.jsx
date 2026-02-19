@@ -13,9 +13,9 @@ export default function DevicesSection() {
         </div>
 
         {/* RIGHT IMAGE (Square on mobile, Circle on desktop) */}
-        <div className="w-80 h-60 md:w-56 md:h-56 rounded-none md:rounded-full overflow-hidden flex md:items-center md:justify-center shadow-lg border-4 border-[#70512E]">
+        <div className="w-80 h-60 md:w-72 md:h-64 rounded-none md:rounded-full overflow-hidden flex md:items-center md:justify-center shadow-lg border-4 border-[#70512E]">
           <img
-            src="/devices/devices-2.jpg"
+            src="/devices/devices-detail.jpg"
             alt="Circle Image"
             className="w-full h-full object-cover"
           />

@@ -44,10 +44,10 @@ export default function StoryAbout() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="absolute bottom-30 left-0 w-full h-80 md:w-96 md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-10 "
+            className="absolute bottom-30 left-0 w-full h-80 md:w-84 md:h-[340px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-10 "
           >
             <Image
-              src="/story/story1.jpg"
+              src="/story/story3.jpg"
               alt="Silhouette yoga at sunrise"
               fill
               className="object-cover object-center"
@@ -62,7 +62,7 @@ export default function StoryAbout() {
             className="absolute top-14 right-0 w-80 h-96 md:w-96 md:h-[300px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white z-5 -rotate-3 hover:rotate-0 transition-transform duration-500 hidden md:block"
           >
             <Image
-              src="/story/story2.jpg"
+              src="/story/story1.jpg"
               alt="Woman in serene meditation pose in nature"
               fill
               className="object-cover object-center"

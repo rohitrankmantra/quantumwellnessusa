@@ -9,9 +9,9 @@ export default function ReviewSection() {
 
         {/* RIGHT IMAGE — mobile me top me (order-1) */}
         <div className="order-1 md:order-2 flex justify-center">
-          <div className="w-full md:w-[60%]">
+          <div className="w-full md:w-full">
             <Image
-              src="/testimonials/testimonial-2.png"
+              src="/testimonials/review.jpg"
               alt="Section Image"
               width={600}
               height={400}

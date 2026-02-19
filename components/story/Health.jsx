@@ -24,9 +24,9 @@ export default function Health() {
 
           {/* Right Div: Image */}
           <div className="md:w-1/2 flex justify-center md:justify-end">
-            <div className="w-full max-w-md rounded-xl overflow-hidden ">
+            <div className="w-full h-full max-w-md rounded-2xl overflow-hidden ">
               <Image
-                src="/story/health.webp"
+                src="/story/story2.jpg"
                 alt="Illustration"
                 width={400}
                 height={400}

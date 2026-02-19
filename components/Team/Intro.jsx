@@ -34,12 +34,12 @@ export default function Intro() {
         >
           <div
             className="relative     /* THIS FIXES THE IMAGE */
-                       w-64 h-64 md:w-80 md:h-80 
-                       rounded-full overflow-hidden 
+                       w-64 h-64 md:w-full md:h-80 
+                        overflow-hidden 
                        shadow-2xl border-6 border-white"
           >
             <Image
-              src="/team/about.jpg"
+              src="/story/philosopy1.jpg"
               alt="Wellness main visual"
               fill
               className="object-cover"
