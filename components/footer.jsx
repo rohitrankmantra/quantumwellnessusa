@@ -58,7 +58,7 @@ export default function Footer() {
           >
             <Link href="/">
               <Image
-                src="/black-logo.webp"
+                src="/logo-dark.jpeg"
                 alt="Quantum Wellness Logo"
                 width={200}
                 height={60}

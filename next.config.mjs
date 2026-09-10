@@ -5,7 +5,7 @@ const nextConfig = {
   },
   output: 'export',
 
-  trailingSlash: true, // ✅ IMPORTANT
+  trailingSlash: true,
 
   images: {
     unoptimized: true,
@@ -15,6 +15,12 @@ const nextConfig = {
       { protocol: 'https', hostname: 'www.heart.org' },
       { protocol: 'https', hostname: 'media.istockphoto.com' }
     ],
+  },
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  httpAgentOptions: {
+    keepAlive: true,
   },
 }
 

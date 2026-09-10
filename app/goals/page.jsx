@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { goalsData } from "../data/goalsData";
 
 export default function GoalsPage() {
@@ -12,10 +13,15 @@ export default function GoalsPage() {
   return (
     <section className="w-full">
       {/* TOP BANNER */}
-      <div
-        className="w-full md:h-[70vh] h-[60vh] bg-cover bg-center relative flex items-center justify-center"
-        style={{ backgroundImage: "url('/goals/fitness-goal.jpg')" }}
-      >
+      <div className="w-full md:h-[70vh] h-[60vh] relative flex items-center justify-center overflow-hidden">
+        <Image
+          src="/goals/fitness-goal.jpg"
+          alt="Fitness goals banner"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative text-white text-2xl md:text-4xl font-semibold text-center px-4">
           Top Goals Clients Aim to Achieve at Quantum Wellness
@@ -43,11 +49,14 @@ export default function GoalsPage() {
               key={index}
               className="group relative block overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
-              <div className="w-full h-[250px]">
-                <img
+              <div className="relative w-full h-[250px] overflow-hidden">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading={index < 3 ? "eager" : "lazy"}
                 />
               </div>
 

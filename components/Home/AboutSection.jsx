@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function AboutSection() {
   return (
     <section className="w-full py-16 px-6 md:px-12">
@@ -31,11 +33,16 @@ export default function AboutSection() {
 
         {/* Right Image */}
         <div className="flex justify-center order-1 md:order-2">
-          <img
-            src="/story/story1.jpg"
-            alt="Wellness Image"
-            className="rounded-xl shadow-lg w-full max-w-lg object-cover"
-          />
+          <div className="relative w-full max-w-lg aspect-[4/3] rounded-xl shadow-lg overflow-hidden">
+            <Image
+              src="/story/story1.jpg"
+              alt="Wellness training and services"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>

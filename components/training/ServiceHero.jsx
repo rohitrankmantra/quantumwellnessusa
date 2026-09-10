@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function ServiceHero({
   backgroundImage,
   title,
@@ -10,9 +12,16 @@ export default function ServiceHero({
 }) {
   return (
     <section
-      className="relative w-full min-h-[70vh] md:min-h-[85vh] bg-cover bg-center flex items-center"
-      style={{ backgroundImage: `url('${backgroundImage}')` }}
+      className="relative w-full min-h-[70vh] md:min-h-[85vh] flex items-center overflow-hidden"
     >
+      <Image
+        src={backgroundImage}
+        alt={title}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 

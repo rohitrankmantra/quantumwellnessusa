@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { storeProducts } from "../../app/data/storeProducts";
 import { CiSearch } from "react-icons/ci";
+import Image from "next/image";
 
 const PRODUCTS_PER_PAGE = 10;
 
@@ -99,10 +100,16 @@ export default function Store() {
                 key={product.id}
                 className="bg-white border rounded-xl shadow-sm"
               >
-                <img
-                  src={product.image}
-                  className="h-56 w-full object-cover rounded-t-xl"
-                />
+                <div className="relative h-56 w-full rounded-t-xl overflow-hidden">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                </div>
 
                 <div className="p-5">
                   <h4 className="text-xl font-semibold">{product.name}</h4>
@@ -148,10 +155,16 @@ export default function Store() {
 
             {/* Scrollable Content */}
             <div className="p-5 overflow-y-auto">
-              <img
-                src={selectedProduct.image}
-                className="w-full h-48 object-cover rounded-lg"
-              />
+              <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                <Image
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 32rem"
+                  className="object-cover"
+                  priority
+                />
+              </div>
 
               <p className="text-lg font-semibold mt-4">
                 {selectedProduct.price}

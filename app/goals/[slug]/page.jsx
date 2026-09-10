@@ -1,5 +1,6 @@
 import { goalsData } from "../../data/goalsData";
 import { FaAtom } from "react-icons/fa";
+import Image from "next/image";
 
 /* REQUIRED for static export */
 export function generateStaticParams() {
@@ -25,9 +26,16 @@ export default async function  SingleGoalPage({ params }) {
     <section className="w-full">
       {/* TOP BANNER */}
       <div
-        className="w-full h-[70vh] bg-cover bg-center flex items-center pt-10 justify-center relative"
-        style={{ backgroundImage: `url(${goal.image})` }}
+        className="w-full h-[70vh] flex items-center pt-10 justify-center relative overflow-hidden"
       >
+        <Image
+          src={goal.image}
+          alt={goal.title}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="relative text-white text-2xl md:text-4xl font-semibold text-center px-4">
           {goal.title}

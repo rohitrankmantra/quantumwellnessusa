@@ -89,7 +89,7 @@ export default function Header() {
         {/* LOGO */}
         <div className="absolute md:static left-0 right-0 mx-auto flex justify-center pointer-events-none md:pointer-events-auto">
           <Link href="/">
-            <Image src="/quantum-logo.webp" width={120} height={50} alt="Logo" />
+            <Image src="/logo.png" width={120} height={80} alt="Logo" />
           </Link>
         </div>
 

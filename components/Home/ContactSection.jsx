@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -26,9 +27,16 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8">
         {/* Left Div */}
         <div
-          className="relative flex-1 h-96 lg:h-auto bg-cover bg-center rounded-lg overflow-hidden"
-          style={{ backgroundImage: "url('/home/contact-img-1.webp')" }}
+          className="relative flex-1 min-h-[24rem] lg:min-h-0 rounded-lg overflow-hidden"
         >
+          <Image
+            src="/home/contact-img-1.webp"
+            alt="Premier Wellness and Longevity Center"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center"
+            loading="lazy"
+          />
           <div className="absolute inset-0 bg-black/10 flex flex-col justify-center items-start p-8 lg:p-16 text-white rounded-lg">
             <h2 className="text-3xl lg:text-4xl font-semibold mb-4">YOUR PREMIER WELLNESS AND LONGEVITY CENTER</h2>
             <p className="text-lg lg:text-xl">Get Started Today on your journey to holistic wellness and energy balancing for the mind body and spirit! </p>
