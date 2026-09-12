@@ -96,7 +96,7 @@ export default function Header() {
         {/* RIGHT MENU */}
         <div className="flex items-center gap-5 text-white z-20">
           <Link href="/reviews" className="hidden sm:block text-sm">REVIEWS</Link>
-          <Link href="/devices" className="hidden sm:block text-sm">DEVICES/SERVICES</Link>
+          <Link href="/devices" className="hidden sm:block text-sm">DEVICES</Link>
           <Link href="/cart"><ShoppingCart size={22} /></Link>
           <Link href="/sign-in" className="border border-white px-4 py-1 rounded-full text-sm hover:bg-white hover:text-black transition">
             Login

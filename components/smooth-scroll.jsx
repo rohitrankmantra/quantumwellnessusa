@@ -34,6 +34,7 @@ export default function SmoothScroll({ children }) {
     })
 
     lenisRef.current = lenis
+    window.lenis = lenis
 
     function raf(time) {
       if (lenisRef.current) {
@@ -69,16 +70,20 @@ export default function SmoothScroll({ children }) {
         lenisRef.current.destroy()
         lenisRef.current = null
       }
+      if (window.lenis) {
+        window.lenis = null
+      }
     }
   }, [])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      window.scrollTo(0, 0)
       if (lenisRef.current) {
         lenisRef.current.scrollTo(0, { immediate: true, force: true })
+      } else {
+        window.scrollTo(0, 0)
       }
-    }, 50)
+    }, 0)
 
     return () => clearTimeout(timeoutId)
   }, [pathname, searchParams])

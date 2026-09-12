@@ -18,7 +18,7 @@ export default function DevicesHero() {
 
       <div className="relative z-10 text-center px-4">
         <h1 className="text-white text-3xl md:text-5xl font-bold leading-tight">
-          Explore Our Ample Wellness Services
+          Explore Our Ample Wellness Devices
         </h1>
       </div>
     </section>

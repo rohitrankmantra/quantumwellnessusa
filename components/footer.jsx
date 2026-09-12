@@ -28,7 +28,11 @@ export default function Footer() {
 
   // Scroll to top function
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (document.documentElement.classList.contains("lenis") && window.lenis) {
+      window.lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   const footerVariants = {

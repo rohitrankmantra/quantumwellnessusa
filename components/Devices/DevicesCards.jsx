@@ -6,7 +6,6 @@ import Image from "next/image";
 export default function DevicesCards() {
   const cards = [
     { title: "ballancer-pro", img: "/devices/devices-img/device-img-1.jpeg", link: "/devices/ballancer-pro" },
-    { title: "braintap", img: "/devices/devices-img/device-img-2.jpeg", link: "/devices/braintap" },
     { title: "bio charger", img: "/devices/devices-img/device-img-3.jpeg", link: "/devices/bio-charger" },
     { title: "cryowave", img: "/devices/devices-img/device-img-4.jpeg", link: "/devices/cryowave" },
     { title: "flexforce", img: "/devices/devices-img/device-img-5.jpeg", link: "/devices/flexforce" },
