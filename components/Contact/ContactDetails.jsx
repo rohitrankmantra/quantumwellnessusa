@@ -83,54 +83,12 @@ export default function ContactDetails() {
         </div>
 
         {/* RIGHT DIV (FORM) */}
-        <div className="bg-white border border-[#70512E] p-6 rounded-xl shadow-md">
-          <form className="space-y-4">
-            {/* First Name */}
-            <input
-              type="text"
-              placeholder="First Name"
-              className="border p-3 active:border-[#70512E] rounded-md w-full "
-            />
+        <div className="bg-white border border-[#d8c6ad] p-6 sm:p-8 rounded-2xl shadow-[0_12px_40px_rgba(112,81,46,0.12)]">
+        
 
-            {/* Last Name */}
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="border p-3 rounded-md w-full"
-            />
-
-            {/* Email */}
-            <input
-              type="email"
-              placeholder="Email"
-              className="border p-3 rounded-md w-full"
-            />
-
-            {/* Phone with Country Flag */}
-            <div className="flex gap-2">
-              <select className="custom-select border hover:cursor-pointer p-3 rounded-md">
-                <option value="+1">🇺🇸 +1</option>
-                <option value="+91">🇮🇳 +91</option>
-                <option value="+44">🇬🇧 +44</option>
-              </select>
-
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="border p-3 rounded-md w-full"
-              />
-            </div>
-
-            {/* Google reCAPTCHA Placeholder */}
-            <div className="border rounded-md p-4 text-center text-gray-500">
-              [ Google reCAPTCHA ]
-            </div>
-
-            {/* Submit Button */}
-            <button className="w-full bg-[#70512E] hover:cursor-pointer hover:bg-[#593915] text-white py-3 rounded-md font-semibold">
-              Submit
-            </button>
-          </form>
+          <div>
+            <wl-lead-capture-widget k_business="36603" k_schema="01a09276-d144-7038-9fae-86aedf7c741b"></wl-lead-capture-widget>
+          </div>
         </div>
       </div>
       {/* New Buttons Section */}

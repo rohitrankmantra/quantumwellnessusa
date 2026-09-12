@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /cart/
+Disallow: /sign-in/
+Disallow: /sign-up/
+
+Sitemap: https://www.quantumwellnessusa.com/sitemap.xml

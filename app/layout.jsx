@@ -13,12 +13,31 @@ const bodyFont = Outfit({ subsets: ["latin"], variable: "--font-body" })
 
 
 export const metadata = {
+  metadataBase: new URL("https://www.quantumwellnessusa.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Quantum Wellness - Premium Fitness & Wellness",
   description:
     "Transform your health with our premium wellness programs, personal training, and holistic approaches to fitness.",
   generator: "v0.app",
   icons: {
     icon: "/logo-site-icon1.svg",
+  },
+  openGraph: {
+    title: "Quantum Wellness - Premium Fitness & Wellness",
+    description:
+      "Transform your health with our premium wellness programs, personal training, and holistic approaches to fitness.",
+    url: "https://www.quantumwellnessusa.com",
+    siteName: "Quantum Wellness",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quantum Wellness - Premium Fitness & Wellness",
+    description:
+      "Transform your health with our premium wellness programs, personal training, and holistic approaches to fitness.",
   },
 }
 
@@ -49,6 +68,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
+        <Script id="wellnessliving-widget" type="module" src="https://widgets.wellnessliving.com/lead-capture/widget.js" strategy="afterInteractive" />
         <Suspense fallback={null}>
           <SmoothScroll>
             <Header />

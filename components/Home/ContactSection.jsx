@@ -1,27 +1,8 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    captcha: "",
-  })
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(formData)
-    alert("Form submitted!")
-  }
-
   return (
     <section className="w-full py-20 bg-[#F1F1F1]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8">
@@ -46,62 +27,9 @@ export default function ContactSection() {
         {/* Right Div (Form) */}
         <div className="flex-1 bg-white p-8 lg:p-12 rounded-lg shadow-md">
           <h3 className="text-2xl font-bold mb-6">Contact Us</h3>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex flex-col lg:flex-row gap-4">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                value={formData.firstName}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#70512E]"
-                required
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={formData.lastName}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#70512E]"
-                required
-              />
-            </div>
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#70512E]"
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#70512E]"
-              required
-            />
-            {/* Simple CAPTCHA */}
-            <input
-              type="text"
-              name="captcha"
-              placeholder="Enter CAPTCHA"
-              value={formData.captcha}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#70512E]"
-              required
-            />
-            <button
-              type="submit"
-              className="w-full bg-[#70512E] text-white hover:cursor-pointer font-semibold py-3 rounded hover:bg-black hover:text-white transition-colors"
-            >
-              Submit
-            </button>
-          </form>
+          <div>
+            <wl-lead-capture-widget k_business="36603" k_schema="01a09276-d144-7038-9fae-86aedf7c741b"></wl-lead-capture-widget>
+          </div>
         </div>
       </div>
     </section>

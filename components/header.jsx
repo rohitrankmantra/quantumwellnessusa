@@ -78,6 +78,9 @@ export default function Header() {
               <Link href="/personal-training/one-on-one" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">
                 One-on-One Personal Training
               </Link>
+              <Link href="/personal-training/nutrition-coaching" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">
+                Nutrition Coaching
+              </Link>
               <Link href="/personal-training/equestrian-performance" className="block px-2 py-1 font-semibold hover:bg-gray-300 hover:text-[#6F512D]">
                 Equestrian Performance Training
               </Link>
@@ -149,6 +152,7 @@ export default function Header() {
             <div className="ml-4 mt-2 space-y-1">
               <Link href="/personal-training/online" className="block">Online Personal Training</Link>
               <Link href="/personal-training/one-on-one" className="block">One-on-One Personal Training</Link>
+              <Link href="/personal-training/nutrition-coaching" className="block">Nutrition Coaching</Link>
               <Link href="/personal-training/equestrian-performance" className="block">Equestrian Performance Training</Link>
             </div>
           )}
